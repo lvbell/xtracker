@@ -1,13 +1,14 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 26
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
 
@@ -24,8 +25,8 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:support-fragment:27.1.1'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:support-fragment:26.1.0'
     implementation 'com.android.support:support-annotations:27.1.1'
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.squareup.okhttp3:okhttp:3.9.1'
@@ -50,4 +51,13 @@ dependencies {
     implementation 'org.jetbrains.anko:anko-sqlite:0.10.5'
 
     implementation files('libs/BloodyJar_release_V1.0.8.jar')
+}
+
+publish {
+    userOrg = 'jiahui921118'//bintray.com用户名
+    groupId = 'com.tracker'//jcenter上的路径
+    artifactId = 'xtracker'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'xtracker desc'//描述，不重要
+    website = 'https://github.com/lvbell/xtracker'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }
