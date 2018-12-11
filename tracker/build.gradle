@@ -21,6 +21,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
 }
 
 dependencies {
@@ -54,9 +58,10 @@ dependencies {
 }
 
 publish {
-    userOrg = 'jiahui921118'//bintray.com用户名
+    repoName = 'xtracker'           //bintray仓库名
+    userOrg = 'jiahui18'//bintray.com用户名
     groupId = 'com.tracker'//jcenter上的路径
-    artifactId = 'xtracker'//项目名称
+    artifactId = 'xTracker'//项目名称
     publishVersion = '1.0.0'//版本号
     desc = 'xtracker desc'//描述，不重要
     website = 'https://github.com/lvbell/xtracker'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
