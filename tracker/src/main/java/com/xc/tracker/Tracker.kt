@@ -187,7 +187,7 @@ object Tracker {
         Log.i(TAG, "simpleService.init")
       }
       isSimpleServiceInit = true
-      SimpleService.init(context, "GMAD001")
+      SimpleService.init(context, "GMAD002")
     }
   }
 
